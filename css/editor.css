@@ -1,0 +1,606 @@
+/* =========================================================
+   RESET & VARIÁVEIS GLOBAIS
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #0b1c33;
+    --cor-secao: #122a49;
+    --cor-destaque: #7c98a3;
+    --cor-destaque-clara: #aebfc6;
+    --cor-texto: #f6f7f7;
+    --cor-acento: #ff9800;
+    --cor-sucesso: #2e7d32;
+    --cor-erro: #e53935;
+    --fonte-base: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --raio-padrao: 10px;
+    --transicao: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-base);
+}
+
+/* =========================================================
+   FUNDO GERAL DA PÁGINA
+   ========================================================= */
+.imagem {
+    background-image: linear-gradient(180deg, rgba(6, 15, 28, 0.85), rgba(6, 15, 28, 0.95)), url("/imagens/foto-treino.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--cor-texto);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+   ========================================================= */
+.secao {
+    background-color: var(--cor-secao);
+    max-width: 960px;
+    min-height: 700px;
+    margin: 60px auto;
+    border-radius: var(--raio-padrao);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    position: relative;
+}
+
+/* =========================================================
+   MENU DE NAVEGAÇÃO
+   ========================================================= */
+.divisao {
+    background-color: var(--cor-destaque);
+    width: 100%;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.divisao a {
+    text-decoration: none;
+}
+
+.inicio, .sobre, .inscricao {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #0b1c33;
+    text-transform: uppercase;
+    text-shadow: none;
+    padding: 6px 4px;
+    border-bottom: 2px solid transparent;
+    transition: var(--transicao);
+}
+
+.inicio:hover, .sobre:hover, .inscricao:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.pagina-ativa {
+    border-bottom: 2px solid #0b1c33;
+}
+
+/* =========================================================
+   BANNER PRINCIPAL (HERO)
+   ========================================================= */
+.texto-foto {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.foto-secao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.45);
+}
+
+.texto {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.85);
+    margin: 0;
+    padding: 0 20px;
+    max-width: 700px;
+}
+
+.texto p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   QUADRADOS DE PLANOS
+   ========================================================= */
+.quadrados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.quadrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--cor-destaque);
+    color: #0b1c33;
+    padding: 24px;
+    width: 250px;
+    min-height: 110px;
+    border-radius: var(--raio-padrao);
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: var(--transicao);
+    cursor: default;
+}
+
+.quadrado:hover {
+    background-color: #ffffff;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================================
+   APRESENTAÇÃO DO PERSONAL (HOME)
+   ========================================================= */
+.container-foto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    padding: 30px 30px 10px;
+}
+
+.foto-personal {
+    background-image: url("/imagens/modelo-personal.png");
+    width: 180px;
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--raio-padrao);
+    border: 3px solid var(--cor-destaque);
+    flex-shrink: 0;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.texto-personal {
+    flex: 1;
+    max-width: 480px;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* =========================================================
+   BLOCO INSTAGRAM
+   ========================================================= */
+.container-insta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0 40px;
+}
+
+.instagram {
+    display: block;
+    background-image: url("/imagens/foto-insta.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.container-insta:hover .instagram {
+    transform: scale(1.15);
+}
+
+.texto-insta {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+    font-size: 14px;
+    color: #b9c4cc;
+    font-weight: 500;
+    padding: 30px 20px 50px;
+}
+
+.rodape p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 0;
+}
+
+.rodape a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transicao);
+}
+
+.rodape a:hover {
+    color: var(--cor-destaque);
+}
+
+.git, .link {
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* =========================================================
+   PÁGINA: INSCRIÇÃO — TABELA
+   ========================================================= */
+.titulo-treino {
+    text-align: center;
+    padding: 30px 20px 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tabela {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto 40px;
+    border-collapse: collapse;
+    border-radius: var(--raio-padrao);
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.tabela th {
+    background-color: var(--cor-destaque);
+    color: #0b1c33;
+    padding: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.tabela td {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    background-color: #0c1531;
+    font-size: 15px;
+}
+
+.tabela tbody tr:nth-child(even) td {
+    background-color: #101a3a;
+}
+
+/* =========================================================
+   FORMULÁRIO DE INSCRIÇÃO
+   ========================================================= */
+.formulario-externo {
+    background-color: #061529;
+    margin: 30px;
+    padding: 20px;
+    border-radius: var(--raio-padrao);
+}
+
+.formulario-interno {
+    background-color: #0a0f1f;
+    border: 1px solid var(--cor-secao);
+    border-radius: var(--raio-padrao);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.formulario-interno p {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-radio {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.campo-radio label {
+    margin: 0;
+    text-transform: none;
+    font-weight: 500;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #2d3e50;
+    border-radius: 6px;
+    background-color: var(--cor-secao);
+    color: #ffffff;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select {
+    cursor: pointer;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 8px rgba(124, 152, 163, 0.4);
+}
+
+::placeholder {
+    color: rgba(230, 229, 229, 0.4);
+}
+
+.texto-erro {
+    color: var(--cor-erro);
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 6px;
+    display: none;
+}
+
+.campo-erro {
+    border: 2px solid var(--cor-erro) !important;
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.5) !important;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+.shake {
+    animation: shake 0.15s ease-in-out 0s 2;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: var(--cor-destaque);
+    color: #0b1c33;
+    border: none;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: var(--transicao);
+}
+
+button[type="submit"]:hover {
+    background-color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   RESULTADO DA CALCULADORA (IMC)
+   ========================================================= */
+.resultado {
+    background-image: linear-gradient(135deg, #1c3a5e, #48839b);
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--raio-padrao);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transition: var(--transicao);
+}
+
+.resultado.visivel {
+    display: flex;
+}
+
+.resultado h3 {
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.resultado p {
+    margin: 6px 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   PÁGINA: SOBRE MIM
+   ========================================================= */
+.foto-sobre {
+    width: 280px;
+    height: 380px;
+    background-image: url("/imagens/modelo-personal.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--raio-padrao);
+    border: 3px solid var(--cor-destaque);
+    flex-shrink: 0;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.coluna-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 500px;
+}
+
+.bloco-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.frase-sobre, .frase-sobre2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--cor-acento);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.titulo-sobre, .titulo-sobre2 {
+    color: #f1f1f1;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: transform 0.3s ease;
+}
+
+/* =========================================================
+   CTA WHATSAPP
+   ========================================================= */
+.cta-whatsapp {
+    text-align: center;
+    padding: 10px 20px 10px;
+}
+
+button[type="button"] {
+    width: auto;
+    display: inline-block;
+    margin: 25px auto 0;
+    min-width: 220px;
+    background-color: var(--cor-sucesso);
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: var(--transicao);
+}
+
+button[type="button"]:hover {
+    background-color: #43a047;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+}
+
+button[type="button"]:active {
+    transform: translateY(0);
+}
+
+.texto-button {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+/* =========================================================
+   URGÊNCIA / VAGAS
+   ========================================================= */
+.container-urgencia {
+    margin: 10px auto 30px;
+    text-align: center;
+    width: 100%;
+}
+
+#contador-vagas {
+    display: inline-block;
+    color: var(--cor-acento);
+    background-color: rgba(255, 152, 0, 0.12);
+    border: 1px solid rgba(255, 152, 0, 0.4);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    animation: pulsar 2s infinite;
+}
+
+#numero-vagas {
+    font-size: 1.1em;
+    color: #ffb74d;
+}
+
+@keyframes pulsar {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.75; transform: scale(1.04); }
+    100% { opacity: 1; transform: scale(1); }
+}

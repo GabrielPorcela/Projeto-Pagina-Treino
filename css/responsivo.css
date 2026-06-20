@@ -1,0 +1,194 @@
+/* =========================================================
+   RESPONSIVO — TABLET (até 1024px)
+   ========================================================= */
+@media (max-width: 1024px) {
+    .secao {
+        margin: 30px auto;
+        max-width: 92%;
+    }
+}
+
+/* =========================================================
+   RESPONSIVO — CELULAR (até 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* Container principal */
+    .secao {
+        margin: 15px auto;
+        width: 94%;
+        min-height: auto;
+        border-radius: 8px;
+    }
+
+    /* Menu de navegação */
+    .divisao {
+        gap: 18px;
+        flex-wrap: wrap;
+        padding: 14px 10px;
+    }
+
+    .inicio, .sobre, .inscricao {
+        font-size: 14px;
+    }
+
+    /* Banner superior */
+    .texto-foto {
+        height: 220px;
+    }
+
+    .texto {
+        font-size: 22px;
+        padding: 0 16px;
+    }
+
+    .texto p {
+        font-size: 14px;
+    }
+
+    /* Planos / quadrados */
+    .quadrados {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 30px 16px;
+    }
+
+    .quadrado {
+        width: 100%;
+        max-width: 320px;
+        min-height: 60px;
+    }
+
+    /* Apresentação do personal (home) */
+    .container-foto {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 16px 0;
+    }
+
+    .foto-personal {
+        width: 200px;
+        height: 260px;
+    }
+
+    .texto-personal {
+        text-align: center;
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .texto-insta {
+        font-size: 14px;
+    }
+
+    /* Página Sobre Mim */
+    .foto-sobre {
+        width: 240px;
+        height: 320px;
+        margin: 0 auto;
+    }
+
+    .coluna-textos {
+        max-width: 100%;
+        padding: 0 18px;
+        text-align: center;
+    }
+
+    .bloco-texto {
+        align-items: center;
+    }
+
+    .frase-sobre, .frase-sobre2 {
+        font-size: 18px;
+    }
+
+    .titulo-sobre, .titulo-sobre2 {
+        font-size: 15px;
+    }
+
+    /* Formulário e tabela */
+    .formulario-externo {
+        margin: 16px;
+        padding: 14px;
+    }
+
+    .formulario-interno {
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .titulo-treino {
+        font-size: 20px;
+        padding: 24px 16px 6px;
+    }
+
+    .tabela {
+        width: 100%;
+        margin: 16px auto 30px;
+    }
+
+    .tabela th, .tabela td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    /* Urgência */
+    .container-urgencia {
+        margin: 8px auto 24px;
+    }
+
+    #contador-vagas {
+        width: 90%;
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+
+    #numero-vagas {
+        font-size: 1.1rem;
+    }
+
+    /* Rodapé */
+    .rodape {
+        padding: 24px 16px 40px;
+        gap: 12px;
+    }
+
+    .rodape p {
+        gap: 14px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVO — CELULARES PEQUENOS (até 420px)
+   ========================================================= */
+@media (max-width: 420px) {
+    .divisao {
+        gap: 12px;
+    }
+
+    .inicio, .sobre, .inscricao {
+        font-size: 12.5px;
+    }
+
+    .texto {
+        font-size: 18px;
+    }
+
+    .foto-personal {
+        width: 160px;
+        height: 210px;
+    }
+
+    .foto-sobre {
+        width: 200px;
+        height: 270px;
+    }
+
+    button[type="submit"], button[type="button"] {
+        font-size: 15px;
+        padding: 14px;
+    }
+}
