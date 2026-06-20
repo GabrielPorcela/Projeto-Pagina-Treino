@@ -34,7 +34,7 @@ body {
    ========================================================= */
 .imagem {
     /* CORRIGIDO: Alterado para ../imagens/ */
-    background-image: linear-gradient(180deg, rgba(6, 15, 28, 0.85), rgba(6, 15, 28, 0.95)), url("../imagens/foto-treino.jpg");
+    background-image: linear-gradient(180deg, rgba(6, 15, 28, 0.85), rgba(6, 15, 28, 0.95)), url("/Projeto-Pagina-Treino/imagens/foto-treino.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
