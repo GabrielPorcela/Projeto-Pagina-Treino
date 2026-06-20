@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição | Personal Trainer Online</title>
+    <meta name="description" content="Inscreva-se e descubra seu IMC e a quantidade de água ideal para o seu dia.">
+    <link rel="stylesheet" href="/Projeto-Pagina-Treino/css/editor.css">
+    <link rel="stylesheet" href="/Projeto-Pagina-Treino/css/responsivo.css">
+</head>
+<body class="imagem">
+    <section class="secao">
+
+        <nav class="divisao">
+            <a href="/index.html"><h2 class="inicio">INÍCIO</h2></a>
+            <a href="/sobre-mim.html"><h2 class="sobre">SOBRE MIM</h2></a>
+            <h2 class="inscricao pagina-ativa">INSCRIÇÃO</h2>
+        </nav>
+
+        <h2 class="titulo-treino">Por que treinar?</h2>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Benefícios</th>
+                    <th>Malefícios do sedentarismo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vitalidade</td>
+                    <td>Lesões</td>
+                </tr>
+                <tr>
+                    <td>Foco</td>
+                    <td>Fadiga</td>
+                </tr>
+                <tr>
+                    <td>Coração</td>
+                    <td>Coluna</td>
+                </tr>
+                <tr>
+                    <td>Mente</td>
+                    <td>Vício</td>
+                </tr>
+                <tr>
+                    <td>Sono</td>
+                    <td>Falta de foco</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form class="formulario-externo" id="form-inscricao">
+            <fieldset class="formulario-interno">
+                <legend style="margin-bottom: 10px; font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px;">Calculadora da Saúde</legend>
+
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome-usuario" placeholder="Nome completo" required>
+                </p>
+
+                <p>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone-usuario" maxlength="15" placeholder="(51) 99999-9999" required>
+                </p>
+
+                <p>
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade-usuario" min="0" max="100" placeholder="Ex: 28">
+                </p>
+
+                <p>
+                    <label for="altura">Sua altura (m):</label>
+                    <input type="number" id="altura" name="altura-usuario" min="0.5" max="2.5" step="0.01" placeholder="Ex: 1.70" required>
+                </p>
+
+                <p>
+                    <label for="peso">Seu peso (Kg):</label>
+                    <input type="number" name="peso-usuario" id="peso" step="0.1" min="1" max="500" placeholder="Ex: 75.5" required>
+                    <span id="erro-peso" class="texto-erro">⚠️ Peso inválido! Insira um valor entre 1 e 500kg.</span>
+                </p>
+
+                <p class="campo-radio">
+                    <input type="radio" id="masc" name="sexo" value="masculino" checked>
+                    <label for="masc">Masculino</label>
+                    <input type="radio" id="fem" name="sexo" value="feminino">
+                    <label for="fem">Feminino</label>
+                </p>
+
+                <p>
+                    <label for="atividade">Nível de atividade física:</label>
+                    <select name="atividade" id="atividade">
+                        <option value="sedentario">Sedentário</option>
+                        <option value="iniciante">Iniciante</option>
+                        <option value="regular">Regular</option>
+                        <option value="avancado">Avançado</option>
+                    </select>
+                </p>
+
+                <button type="submit">FINALIZAR INSCRIÇÃO</button>
+
+                <div id="resultado-imc" class="resultado" aria-live="polite"></div>
+            </fieldset>
+        </form>
+    </section>
+
+    <footer class="rodape">
+        <p class="paragrafo-rodape1">Copyright &copy; 2025 - Desenvolvido por Gabriel Porcela</p>
+        <p class="paragrafo-rodape2">
+            <a href="https://github.com/GabrielPorcela" target="_blank" rel="noopener noreferrer" class="texto-git">
+                <img src="/Projeto-Pagina-Treino/imagens/foto-git.png" alt="Ícone GitHub" class="git">GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/gabrielporcela" target="_blank" rel="noopener noreferrer" class="texto-link">
+                <img src="/Projeto-Pagina-Treino/imagens/foto-link.png" alt="Ícone LinkedIn" class="link">Linkedin
+            </a>
+        </p>
+    </footer>
+
+    <script src="/Projeto-Pagina-Treino/javascript/pagina.js"></script>
+</body>
+</html>
